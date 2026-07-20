@@ -1,0 +1,343 @@
+/* 
+   MOODSPACE DASHBOARD - TOTAL UPPER UI & GREETINGS UPGRADE
+ */
+
+/* Global Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Body Setup  */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #070a13, #0f172a); 
+    color: #f8fafc; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 50px 0;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.8s ease;
+}
+
+/* --- 2. Navbar Setup --- */
+.navbar {
+    width: 100vw;
+    background: rgba(11, 17, 32, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 60px; /* Padding thodi kam ki hai taake nav sleek lage */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 40px;
+}
+
+/* Logo container */
+.nav_logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ff00ff;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Image aur text ke darmiyan gap */
+}
+
+/* Logo Image  */
+.nav_logo img {
+    width: 40px;          
+    height: 40px;         
+    object-fit: cover;    
+    border-radius: 50%;   
+    border: 2px solid rgba(255, 0, 255, 0.5); 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.nav_links {
+    display: flex;
+    gap: 35px; /* Home aur About ke darmiyan gap */
+}
+
+.nav_links a {
+    color: #f8fafc; /* Ekdam saaf aur bright color */
+    text-decoration: none; /* Neeche se fuzool line hatane ke liye */
+    font-size: 1.1rem; /* Thoda bada size */
+    font-weight: 700; /* Bold text taake prominent dikhe */
+    transition: all 0.3s ease;
+}
+
+/* FIX: Selector updated here too */
+.nav_links a:hover {
+    color: #38bdf8; 
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.header_theme {
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 955px;
+    margin-bottom: 35px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand Title Fix */
+.header_theme h1 {
+    font-size: 3.5rem; 
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ff00ff, #38bdf8); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* GREETINGS */
+#greetings {
+    font-size: 1.4rem;
+    color: #ff2a5f; /* Much brighter neon pink/coral */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 25px rgba(255, 42, 95, 0.7);
+    background: rgba(255, 42, 95, 0.12);
+    padding: 8px 24px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 5px;
+    border: 1px solid rgba(255, 42, 95, 0.3);
+}
+
+/* --- 4. VIBE SECTION UPGRADE: Subheading and buttons brightened --- */
+.theme_Container {
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 955px;
+    margin-bottom: 40px;
+    background: rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 25px;
+}
+
+/* "CHOOSE YOUR VIBE"  */
+.theme_Container h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+    margin-bottom: 18px;
+    color: #00ffff; /* Cyber cyan for high visibility */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    font-weight: 800;
+}
+
+.theme_buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.theme_buttons button {
+    background-color: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 12px 28px;
+    border-radius: 30px; 
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*   Theme Buttons */
+.theme_buttons button:nth-child(1):hover { 
+    background: rgba(0, 255, 127, 0.2); 
+    color: #00ff7f; /* Electric Spring Green */
+    border-color: #00ff7f; 
+    transform: translateY(-4px); 
+    box-shadow: 0 0 25px rgba(0, 255, 127, 0.5); 
+}
+.theme_buttons button:nth-child(2):hover { 
+    background: rgba(0, 191, 255, 0.2); 
+    color: #00bfff; /* Deep Electric Sky Blue */
+    border-color: #00bfff; 
+    transform: translateY(-4px); 
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.5); 
+}
+.theme_buttons button:nth-child(3):hover { 
+    background: rgba(255, 0, 128, 0.2); 
+    color: #ff0080; /* Hot Neon Pink */
+    border-color: #ff0080; 
+    transform: translateY(-4px); 
+    box-shadow: 0 0 25px rgba(255, 0, 128, 0.5); 
+}
+
+/* --- 5. Main Cards Grid --- */
+.dashboard_container {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.timer_card, .todo_cards {
+    background: rgba(15, 23, 42, 0.6); 
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 35px;
+    width: 460px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timer_card:hover, .todo_cards:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 6. Focus Timer Elements --- */
+.foucs_timer h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; }
+.timer_digits {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%; 
+    border: 4px solid rgba(255, 255, 255, 0.08); 
+    border-top: 4px solid #38bdf8; 
+    font-size: 3.4rem; font-weight: 800; font-family: monospace, sans-serif; 
+    color: #38bdf8; text-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    display: flex; justify-content: center; align-items: center;
+    margin: 0 auto 30px auto; background: rgba(255, 255, 255, 0.02);
+}
+
+.timer_button { display: flex; justify-content: center; gap: 12px; }
+.timer_button button { padding: 12px 24px; font-weight: 700; font-size: 0.95rem; border-radius: 14px; border: none; cursor: pointer; transition: all 0.3s ease; }
+.timer_button button:nth-child(1) { background: #ffffff; color: #0f172a; }
+.timer_button button:nth-child(2) { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); }
+.timer_button button:nth-child(3) { background: rgba(148, 163, 184, 0.1); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.15); }
+
+/* --- 7. To-Do Tasks Elements --- */
+.todo_cards h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; }
+.todo_cards input[type="text"] {
+    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 18px; border-radius: 14px; color: #ffffff; width: 68%; outline: none; margin-right: 10px;
+}
+.todo_cards button { background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 14px 24px; font-weight: 700; border-radius: 14px; cursor: pointer; }
+.todo_cards ul { list-style: none; margin-top: 25px; }
+.todo_cards ul li { background: rgba(255, 255, 255, 0.02); padding: 14px 18px; border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #10b981; color: #e2e8f0; }
+
+/* --- 8. About & 9. Footer --- */
+.about_container { max-width: 955px; width: calc(100% - 40px); background: rgba(15, 23, 42, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; padding: 45px 50px; text-align: center; margin-top: 10px; margin-bottom: 60px; }
+
+.about_container h2 { font-size: 2rem; color: #38bdf8; margin-bottom: 20px; }
+.about_container p { font-size: 1.1rem; line-height: 1.8; color: #94a3b8; }
+footer p { text-align: center; font-size: 0.95rem; color: rgba(148, 163, 184, 0.4); }
+
+/*
+   DYNAMIC THEMES CONFIGURATION 
+ */
+
+/* 1. Nature Theme*/
+body.nature-theme { background: linear-gradient(135deg, #012217, #064e3b); }
+body.nature-theme .header_theme h1 { background: linear-gradient(to right, #00ff9d, #55ff00); -webkit-background-clip: text; }
+body.nature-theme .timer_digits { color: #00ff9d; border-top-color: #00ff9d; text-shadow: 0 0 25px rgba(0, 255, 157, 0.6); }
+body.nature-theme .theme_Container h3 { color: #00ff9d; text-shadow: 0 0 15px rgba(0, 255, 157, 0.4); }
+
+/* 2. Rain Theme */
+body.rain-theme { background: linear-gradient(135deg, #030d22, #1e3a8a); }
+body.rain-theme .header_theme h1 { background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; }
+body.rain-theme .timer_digits { color: #00f2fe; border-top-color: #00f2fe; text-shadow: 0 0 25px rgba(0, 242, 254, 0.6); }
+body.rain-theme .theme_Container h3 { color: #00f2fe; text-shadow: 0 0 15px rgba(0, 242, 254, 0.4); }
+
+/* 3. Cyberpunk Theme */
+body.cyberpunk-theme { background: linear-gradient(135deg, #18002c, #3b0066); }
+body.cyberpunk-theme .header_theme h1 { background: linear-gradient(to right, #ff007f, #7f00ff); -webkit-background-clip: text; }
+body.cyberpunk-theme .timer_digits { color: #ff007f; border-top-color: #ff007f; text-shadow: 0 0 25px rgba(255, 0, 127, 0.6); }
+body.cyberpunk-theme .theme_Container h3 { color: #ff007f; text-shadow: 0 0 15px rgba(255, 0, 127, 0.4); }
+
+/* --- Mood Analytics Styles --- */
+.mood-log-container {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.mood-title {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.mood-emojis {
+    display: flex;
+    gap: 15px;
+}
+
+.mood-btn {
+    font-size: 1.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Individual Emoji Hover  */
+.mood-btn:hover, .mood-btn.active {
+    transform: scale(1.15) translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mood-btn[data-mood="happy"].active, .mood-btn[data-mood="happy"]:hover { border-color: #ffd700; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+.mood-btn[data-mood="sad"].active, .mood-btn[data-mood="sad"]:hover { border-color: #38bdf8; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+.mood-btn[data-mood="tired"].active, .mood-btn[data-mood="tired"]:hover { border-color: #a78bfa; box-shadow: 0 0 20px rgba(167, 139, 250, 0.4); }
+.mood-btn[data-mood="focused"].active, .mood-btn[data-mood="focused"]:hover { border-color: #00ffff; box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); }
+.mood-btn[data-mood="motivated"].active, .mood-btn[data-mood="motivated"]:hover { border-color: #ff4500; box-shadow: 0 0 20px rgba(255, 69, 0, 0.4); }
+
+/* Dynamic Quote Box */
+.mood-quote-box {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #cbd5e1;
+    max-width: 600px;
+    line-height: 1.5;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
