@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         li.textContent = taskText;
 
-        // Task par click karne se usay complete strike effect dene ke liye (Optional)
+       
         li.addEventListener("click", () => {
             li.style.textDecoration = li.style.textDecoration === "line-through" ? "none" : "line-through";
             li.style.opacity = li.style.opacity === "0.5" ? "1" : "0.5";
